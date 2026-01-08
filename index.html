@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fotografía y vídeo de boda en Castellón, Valencia y Alicante</title>
+<meta content="Fotografía y vídeo de boda natural en Valencia, Castellón y Alicante. Cobertura completa, entrega cuidada y trato cercano. Consulta disponibilidad y packs." name="description"/>
+<!-- Open Graph / WhatsApp -->
+<meta content="website" property="og:type"/>
+<meta content="Fotografía y vídeo de boda en Castellón, Valencia y Alicante" property="og:title"/>
+<meta content="Fotografía y vídeo de boda natural en Valencia, Castellón y Alicante. Cobertura completa, entrega cuidada y trato cercano. Consulta disponibilidad y packs." property="og:description"/>
+<!-- IMPORTANTE: URL absoluta para WhatsApp -->
+<meta content="https://42562830.github.io/HappyWeddings/images/portadas/portadas-08.jpg" property="og:image"/>
+
+<!-- Fuentes Premium -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Iconos FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<style>
+        /* =========================================
+           1. VARIABLES Y CONFIGURACIÓN CORPORATIVA
+           ========================================= */
+        :root {
+            --bg-crema: #f8eff1;      
+            --bg-azul: #d6e8ef;       
+            --texto-principal: #2b2323; 
+            --texto-secundario: #7d7572; 
+            --blanco: #ffffff;
+            --acento: #e6bdc3;        
+            
+            --padding-desktop: 100px 0;
+            --padding-mobile: 60px 0; 
+            --container-width: 1400px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; font-size: 16px; }
+
+        body {
+            background-color: var(--blanco);
+            color: var(--texto-principal);
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 30px;
+            width: 100%;
+        }
+
+        .text-center { text-align: center; }
+
+        /* =========================================
+           2. COMPONENTES DE UI
+           ========================================= */
+        .btn-editorial {
+            display: inline-block;
+            padding: 14px 35px;
+            border: 1px solid var(--texto-principal);
+            color: var(--texto-principal);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .btn-editorial:hover {
+            background-color: var(--texto-principal);
+            color: var(--blanco);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(43, 35, 35, 0.1);
+        }
+
+        .section-header { margin-bottom: 50px; text-align: center; }
+        .section-header span {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--texto-secundario);
+            margin-bottom: 15px;
+        }
+        .section-header h2 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+
+        /* =========================================
+           3. HEADER Y NAVEGACIÓN
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 20px 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 12px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.03);
+        }
+
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo a { display: block; line-height: 0; }
+        .logo img { height: 95px; width: auto; transition: height 0.4s ease; }
+        header.scrolled .logo img { height: 70px; } 
+
+        .desktop-nav ul { display: flex; list-style: none; gap: 40px; align-items: center; }
+        .desktop-nav a {
+            text-decoration: none; color: var(--texto-principal); font-size: 0.8rem;
+            text-transform: uppercase; letter-spacing: 1.5px; position: relative;
+        }
+        .desktop-nav a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
+            background: var(--texto-principal); transition: width 0.3s ease;
+        }
+        .desktop-nav a:hover::after { width: 100%; }
+
+        .hamburger { display: none; cursor: pointer; z-index: 1001; padding: 10px; }
+        .hamburger div {
+            width: 30px; height: 2px; background-color: var(--texto-principal);
+            margin: 6px 0; transition: all 0.3s ease;
+        }
+
+        /* Menú Móvil */
+        .mobile-nav {
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+            background: var(--bg-crema); display: flex; flex-direction: column;
+            transition: right 0.6s cubic-bezier(0.77, 0, 0.175, 1); z-index: 2000;
+        }
+        .mobile-nav.active { right: 0; }
+        .mobile-nav-header {
+            width: 100%; padding: 60px 20px 20px; display: flex;
+            justify-content: center; align-items: center; position: relative; margin-bottom: 20px;
+        }
+        .mobile-logo { width: 160px; height: auto; max-width: 60%; display: block; }
+        .close-btn {
+            background: none; border: none; font-size: 2.5rem; color: var(--texto-principal);
+            cursor: pointer; position: absolute; right: 30px; top: 55px; padding: 10px;
+        }
+        .mobile-nav-links {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            align-items: center;
+            list-style: none;
+            overflow-y: auto;
+            max-height: calc(100vh - 160px);
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+        .mobile-nav li { margin: 15px 0; opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
+        .mobile-nav.active li { opacity: 1; transform: translateY(0); }
+        .mobile-nav a {
+            font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+            color: var(--texto-principal); text-decoration: none; position: relative;
+        }
+        .mobile-nav a::after {
+            content: ''; position: absolute; bottom: 5px; left: 50%; transform: translateX(-50%);
+            width: 0; height: 1px; background: var(--acento); transition: width 0.3s;
+        }
+
+        /* =========================================
+           4. SECCIONES PRINCIPALES
+           ========================================= */
+        .hero {
+            height: 100vh; min-height: 600px; position: relative;
+            display: flex; align-items: center; justify-content: center;
+            background-color: var(--bg-crema); overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0.9; animation: zoomEffect 25s infinite alternate;
+        }
+        
+        .hero-video{ animation: none; pointer-events:none; }
+        .hero-fallback{ display:none; }
+        @media (prefers-reduced-motion: reduce){
+            .hero-video{ display:none; }
+            .hero-fallback{ display:block; }
+        }
+        @keyframes zoomEffect { from { transform: scale(1); } to { transform: scale(1.1); } }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 38%, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.18) 100%);
+        }
+        .hero-content {
+            position: relative; z-index: 2; text-align: center; color: var(--blanco);
+            padding: 0 20px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .hero-content::before{
+            content:""; position:absolute; left: -18px; right: -18px; top: -14px; bottom: -18px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.20) 55%, rgba(0,0,0,0.14) 100%);
+            border: 1px solid rgba(255,255,255,0.10); box-shadow: 0 14px 50px rgba(0,0,0,0.35);
+            border-radius: 18px; z-index: -1; pointer-events: none;
+        }
+        
+        /* SEO INVISIBLE */
+        .seo-h1 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+        .visual-h1 {
+            font-family: 'Cormorant Garamond', serif; font-weight: 400;
+            font-size: clamp(3rem, 8vw, 6rem); font-style: italic;
+            text-shadow: 0 6px 28px rgba(0,0,0,0.55), 0 2px 10px rgba(0,0,0,0.35); 
+            margin-bottom: 20px; display: block; -webkit-text-stroke: 0.6px rgba(0,0,0,0.35);
+        }
+
+        .hero-content p {
+            font-size: clamp(1rem, 3vw, 1.2rem); text-transform: uppercase;
+            letter-spacing: 2.6px; margin-bottom: 40px; font-weight: 400;
+            text-shadow: 0 4px 18px rgba(0,0,0,0.65); -webkit-text-stroke: 0.4px rgba(0,0,0,0.35);
+        }
+
+        .about { padding: var(--padding-desktop); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-img { width: 100%; height: auto; border-radius: 200px 200px 0 0; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+        .services { background-color: var(--bg-crema); padding: var(--padding-desktop); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .service-card {
+            background: var(--blanco); padding: 0 !important; overflow: hidden;
+            text-align: left; border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease;
+        }
+        .service-img-holder { width: 100%; height: 250px; overflow: hidden; }
+        .service-img-holder img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .service-card:hover .service-img-holder img { transform: scale(1.1); }
+        .service-content { padding: 40px; text-align: center; }
+        .service-number {
+            font-family: 'Cormorant Garamond', serif; font-size: 3rem;
+            color: var(--acento); opacity: 0.5; margin-bottom: 10px;
+        }
+
+        /* Lightbox (Solo para servicios y cosas que no sean galería) */
+        .lightbox-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(20, 20, 20, 0.98); z-index: 3000;
+            display: flex; justify-content: center; align-items: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+        }
+        .lightbox-modal.open { opacity: 1; pointer-events: auto; }
+        .lightbox-content { position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
+        .lightbox-image { max-height: 90vh; max-width: 90vw; box-shadow: 0 10px 40px rgba(0,0,0,0.5); object-fit: contain; user-select: none; }
+        .lightbox-close {
+            position: fixed; top: 30px; right: 30px; color: var(--blanco);
+            font-size: 2rem; background: rgba(255, 255, 255, 0.1); width: 50px; height: 50px;
+            border-radius: 50%; border: none; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; transition: all 0.3s; z-index: 3005;
+        }
+
+        /* Contact & Footer */
+        .contact { background-color: var(--bg-azul); padding: var(--padding-desktop); }
+        .contact-wrapper {
+            background: var(--blanco); padding: 60px; max-width: 800px; margin: 0 auto;
+            border: 1px solid var(--bg-crema); box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+        }
+        .form-group { margin-bottom: 25px; text-align: left; }
+        .form-group label {
+            display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 8px; color: var(--texto-secundario);
+        }
+        .form-control {
+            width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #ddd;
+            font-family: 'Lato', sans-serif; font-size: 1rem; background: transparent; transition: border-color 0.3s;
+        }
+        .form-control:focus { outline: none; border-bottom-color: var(--texto-principal); }
+
+        footer { background: var(--texto-principal); color: var(--bg-crema); padding: 60px 0 20px; text-align: center; }
+        .social-icons a { color: var(--bg-crema); margin: 0 15px; font-size: 1.2rem; transition: color 0.3s; }
+        .social-icons a:hover { color: var(--acento); }
+
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background-color: var(--texto-principal); color: white;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 2000; transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover { background-color: var(--acento); transform: scale(1.1); }
+
+        @media (max-width: 1024px) {
+            .about-grid { gap: 40px; }
+        }
+        @media (max-width: 768px) {
+            .desktop-nav { display: none; }
+            .hamburger { display: block; }
+            .logo img { height: 80px; } 
+            header.scrolled .logo img { height: 60px; }
+            .about, .services, .portfolio, .contact { padding: var(--padding-mobile); }
+            .hero-content h1 { font-size: 3.5rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-wrapper { padding: 30px 20px; }
+        }
+
+        /* REVEAL */
+        body:not(.js) .reveal{ opacity: 1; transform: none; }
+        body.js .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        body.js .reveal.active { opacity: 1; transform: translateY(0); }
+
+        header:not(.scrolled) { background: linear-gradient(to bottom, rgba(0,0,0,0.50), rgba(0,0,0,0)); }
+        header:not(.scrolled) .desktop-nav a { color: rgba(255,255,255,0.92); text-shadow: 0 2px 14px rgba(0,0,0,0.45); }
+        header:not(.scrolled) .desktop-nav a::after { background: rgba(255,255,255,0.9); }
+        header:not(.scrolled) .hamburger div { background-color: rgba(255,255,255,0.92); }
+
+        /* SERVICIOS AVAILABLE */
+        .services-available{ margin-top: 60px; background: rgba(255,255,255,0.92); border: 1px solid rgba(0,0,0,0.06); border-radius: 18px; padding: 34px 34px; box-shadow: 0 18px 45px rgba(0,0,0,0.06); }
+        .services-available h3{ font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 18px; color: var(--texto-principal); }
+        .two-col-list{ list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; color: var(--texto-principal); font-size: 0.95rem; }
+        .two-col-list li{ position: relative; background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; padding: 12px 14px 12px 40px; line-height: 1.5; color: rgba(29,29,29,0.78); }
+        .two-col-list li::before{ content: "✓"; position: absolute; left: 14px; top: 12px; color: var(--acento); font-weight: 700; }
+        @media (max-width: 820px){ .two-col-list{ grid-template-columns: 1fr; } }
+
+        /* WHY CHOOSE US */
+        .why { padding: var(--padding-desktop); background: var(--blanco); }
+        .why-grid{ max-width: 900px; margin: 0 auto; background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.08); border-radius: 18px; padding: 34px 34px; box-shadow: 0 18px 45px rgba(0,0,0,0.06); }
+        .why-list{ list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 22px; color: var(--texto-secundario); font-size: 1rem; }
+        .why-list li{ background: rgba(255,255,255,0.75); border: 1px solid rgba(0,0,0,0.06); border-radius: 14px; padding: 14px 14px 14px 44px; line-height: 1.55; position: relative; }
+        .why-list li::before{ content: "✓"; position: absolute; left: 16px; top: 14px; color: var(--acento); font-weight: 700; }
+        @media (max-width: 820px){ .why-list{ grid-template-columns: 1fr; } }
+
+        /* ZONES */
+        .zones { background-color: var(--bg-azul); padding: var(--padding-desktop); }
+        .zones-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .zone-card{ background: var(--blanco); overflow: hidden; border: 1px solid rgba(0,0,0,0.02); transition: transform 0.3s ease; border-radius: 6px; box-shadow: 0 10px 35px rgba(0,0,0,0.035); }
+        .zone-card:hover{ transform: translateY(-10px); }
+        .zone-img{ width: 100%; height: 220px; overflow: hidden; }
+        .zone-img img{ width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .zone-card:hover .zone-img img{ transform: scale(1.06); }
+        .zone-content{ padding: 40px; text-align: left; }
+        .zone-content h3{ font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 14px; color: var(--texto-principal); }
+        .zone-content p{ color: var(--texto-secundario); font-size: 0.95rem; line-height: 1.7; }
+
+        /* FAQ */
+        .faq{ background: var(--blanco); padding: 90px 0; }
+        .faq-grid{ max-width: 920px; margin: 35px auto 0; display: grid; gap: 14px; }
+        .faq-item{ border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; background: rgba(255,255,255,0.9); overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.06); }
+        .faq-item summary{ cursor: pointer; list-style: none; padding: 18px 18px; font-weight: 600; color: var(--texto-principal); position: relative; }
+        .faq-item summary::-webkit-details-marker{ display:none; }
+        .faq-item summary::after{ content: "+"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.2rem; opacity: 0.7; }
+        .faq-item[open] summary::after{ content: "–"; }
+        .faq-body{ padding: 0 18px 18px 18px; }
+
+        /* =========================================
+           6. GALERÍA: POSTER EDITORIAL (4:5)
+           ========================================= */
+        #galeria .zones-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        #galeria .zone-card {
+            aspect-ratio: 4/5; 
+            position: relative;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            isolation: isolate;
+            background-color: #000;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        #galeria .zone-img {
+            height: 100%; width: 100%; position: absolute; inset: 0; z-index: 1;
+        }
+
+        #galeria .zone-img img {
+            height: 100%; width: 100%; object-fit: cover;
+            transition: transform 3s ease;
+            animation: posterBreathe 10s infinite alternate ease-in-out;
+        }
+
+        @keyframes posterBreathe {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        #galeria .zone-card::after {
+            content: ""; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.1) 60%, transparent 100%);
+            z-index: 2; pointer-events: none;
+        }
+
+        #galeria .zone-content {
+            position: absolute; bottom: 0; left: 0; width: 100%; z-index: 3;
+            padding: 30px 25px; text-align: center; color: var(--blanco);
+            display: flex; flex-direction: column; justify-content: flex-end; height: 100%;
+        }
+
+        #galeria .zone-content h3 {
+            font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 2.5rem;
+            font-weight: 400; color: #ffffff; margin-bottom: 5px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); line-height: 1;
+        }
+
+        #galeria .zone-content p {
+            color: rgba(255,255,255,0.85); font-size: 0.9rem; line-height: 1.5; margin-bottom: 5px;
+            font-weight: 300; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+            overflow: hidden; text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+        }
+
+        #galeria .zone-content p:last-child {
+            margin-top: 15px; color: var(--acento) !important; font-family: 'Lato', sans-serif;
+            text-transform: uppercase; letter-spacing: 3px; font-size: 0.7rem; font-weight: 700; opacity: 1;
+            text-shadow: none; -webkit-line-clamp: 1;
+        }
+
+        @media (max-width: 768px) {
+            #galeria .zones-grid { grid-template-columns: 1fr; padding: 0 10px; }
+            #galeria .zone-card { margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+            #galeria .zone-content h3 { font-size: 3rem; }
+        }
+
+        /* Contact links */
+        .contact-links{ display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 25px 0; }
+        @media (min-width: 992px){ #contact-links{ display: none; } }
+        .contact-pill{ display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 999px; text-decoration: none; color: var(--texto-principal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; background: rgba(255,255,255,0.7); }
+        .contact-pill:hover{ border-color: var(--acento); }
+        .contact-close{ margin-top: 28px; text-align: center; color: var(--texto-secundario); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<!-- Navegación -->
+<header id="navbar">
+<div class="container nav-container">
+<div class="logo">
+<a href="#inicio">
+<img alt="Happy Weddings Spain" decoding="async" src="Logo.png"/>
+</a>
+</div>
+<nav class="desktop-nav">
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li><li><a href="#por-que-elegir">Por qué elegir</a></li>
+<li><a href="#servicios">Servicios</a></li><li><a href="#zonas">Zonas</a></li>
+<li><a href="#galeria">Galería</a></li>
+<li><a href="#contacto" style="border: 1px solid currentColor; padding: 8px 15px; border-radius: 20px;">Contacto</a></li>
+</ul>
+</nav>
+<div aria-controls="mobile-nav" aria-expanded="false" aria-label="Abrir menú" class="hamburger" id="hamburger" onclick="toggleMenu()" role="button" tabindex="0">
+<div class="line1"></div><div class="line2"></div><div class="line3"></div>
+</div>
+</div>
+</header>
+<!-- Menú Móvil -->
+<div class="mobile-nav" id="mobile-nav">
+<div class="mobile-nav-header">
+<img alt="Happy Weddings Logo" class="mobile-logo" decoding="async" src="Logo.png"/>
+<button class="close-btn" onclick="toggleMenu()">
+<i class="fas fa-times"></i>
+</button>
+</div>
+<ul class="mobile-nav-links">
+<li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+<li><a href="#nosotros" onclick="toggleMenu()">Nosotros</a></li><li><a href="#por-que-elegir" onclick="toggleMenu()">Por qué elegir</a></li>
+<li><a href="#servicios" onclick="toggleMenu()">Servicios</a></li><li><a href="#zonas" onclick="toggleMenu()">Zonas</a></li>
+<li><a href="#galeria" onclick="toggleMenu()">Galería</a></li>
+<li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+</ul>
+</div>
+<!-- Hero -->
+<section class="hero" id="inicio">
+<video aria-hidden="true" autoplay="" class="hero-bg hero-video" loop="" muted="" playsinline="" poster="images/portadas/portadas-08.jpg" preload="auto">
+<source src="intro.mp4" type="video/mp4"/>
+</video>
+<img alt="Boda portada" class="hero-bg hero-fallback" decoding="async" fetchpriority="high" loading="eager" src="images/portadas/portadas-08.jpg"/>
+<div class="hero-overlay"></div>
+<div class="hero-content reveal">
+<!-- TRUCO SEO -->
+<h1 class="seo-h1">Fotografía y vídeo de boda en Castellón, Valencia y Alicante</h1>
+<span class="visual-h1">Fotografía y vídeo de boda en Castellón, Valencia y Alicante</span>
+<p>Fotografía y vídeo de boda con un enfoque natural y elegante. Trabajamos en Valencia, Castellón y Alicante. <strong>Respuesta en 24h.</strong></p>
+<a class="btn-editorial" href="https://api.whatsapp.com/send/?phone=34614297072&amp;text=Hola+Happy+Weddings" rel="noopener" style="color: white; border-color: white;" target="_blank">Comprobar disponibilidad</a>
+</div>
+</section>
+<!-- Nosotros -->
+<section class="about" id="nosotros">
+<div class="container">
+<div class="about-grid">
+<div class="about-img-container reveal">
+<img alt="Enrique y Sonia, equipo de Happy Weddings" class="about-img" decoding="async" loading="lazy" src="nosotros.jpg"/>
+</div>
+<div class="about-text reveal">
+<div class="section-header" style="text-align: left;">
+<span>Quiénes somos</span>
+<h2>Happy Weddings</h2>
+</div>
+<p style="margin-bottom: 20px; color: var(--texto-secundario);"><strong>Nosotros somos Enrique y Sonia</strong>, aunque el equipo de Happy Weddings está formado por varios profesionales del sector de la fotografía y vídeo de bodas. Nosotros estamos siempre al frente.</p>
+<p style="margin-bottom: 20px; color: var(--texto-secundario);">Llevamos más de <strong>10 años</strong> metidos en bodas hasta el cuello: cámaras al hombro, zapatillas cómodas y mil historias que contar. Nos vais a ver correr, reír, o incluso emocionarnos con vosotros (a veces literal), y dejarlo todo para que tengáis recuerdos que no den pereza enseñar.</p>
+<p style="margin-bottom: 0; color: var(--texto-secundario);">No hacemos poses de catálogo ni vídeos que parecen tráileres de peli sueca. Hacemos la vuestra. Con emoción, con fiesta y con alma.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Servicios -->
+<section class="services" id="servicios">
+<div class="container">
+<div class="section-header reveal">
+<span>Servicios</span>
+<h2>Fotografía y vídeo de boda</h2>
+</div>
+<div class="services-grid">
+<div class="service-card reveal">
+<div class="service-img-holder">
+<img alt="Fotografía de Boda" decoding="async" loading="lazy" src="images/portadas/portadas-04.jpg"/>
+</div>
+<div class="service-content">
+<div class="service-number">01</div>
+<h3>Fotografía y vídeo del día completo</h3>
+<p style="color: var(--texto-secundario); font-size: 0.9rem;">Cobertura completa de vuestro día (foto + vídeo). <strong>Packs desde 1.499 €</strong> (entrega digital/Pendrive). <strong>Álbum y dron: extras opcionales.</strong></p>
+</div>
+</div>
+<div class="service-card reveal">
+<div class="service-img-holder">
+<img alt="Cinematografía de Boda" decoding="async" loading="lazy" src="images/portadas/portadas-12.jpg"/>
+</div>
+<div class="service-content">
+<div class="service-number">02</div>
+<h3>Álbum profesional y minis</h3>
+<p style="color: var(--texto-secundario); font-size: 0.9rem;">Álbum premium con acabados a elegir + minis para padres. Diseño editorial y revisión antes de imprimir. <strong>Opcional</strong> (no incluido en el pack base).</p>
+</div>
+</div>
+<div class="service-card reveal">
+<div class="service-img-holder">
+<img alt="Sesión Editorial" decoding="async" loading="lazy" src="images/portadas/portadas-17.jpg"/>
+</div>
+<div class="service-content">
+<div class="service-number">03</div>
+<h3>Vídeo de boda con dron</h3>
+<p style="color: var(--texto-secundario); font-size: 0.9rem;">Planos aéreos para fincas y exteriores cuando las condiciones lo permiten. <strong>Servicio extra</strong> (no incluido en 1.499 €).</p>
+</div>
+</div>
+</div><div class="services-available reveal" id="servicios-disponibles"><h3>Servicios disponibles</h3><ul class="two-col-list"><li>Fotografía y vídeo del día completo</li><li>Álbum profesional y minis</li><li>Vídeo de boda con dron</li><li>Sesión Preboda - Postboda</li><li>Happy print - Same day edit</li><li>Photomaton - Video 360 - Video confesionario</li></ul></div>
+</div>
+</section>
+<!-- GALERÍA: 8 BODAS REALES -->
+<section class="why" id="por-que-elegir"><div class="container"><div class="section-header reveal"><span>Por qué elegir</span><h2>Happy Weddings</h2></div><div class="why-grid"><ul class="why-list"><li>Un solo equipo para foto + vídeo (coordinación total)</li><li>Cobertura completa: preparativos, ceremonia, cóctel y fiesta</li><li>Respuesta en 24h y trato cercano</li><li>Entrega cuidada y organizada</li><li>Bodas civiles y religiosas</li><li>Packs desde 1.499 € (álbum y dron opcionales)</li></ul></div></div></section><section class="zones" id="zonas"><div class="container"><div class="section-header reveal"><span>Zonas donde trabajamos</span><h2>Castellón, Valencia y Alicante</h2></div><div class="zones-grid"><div class="zone-card reveal"><div class="zone-img"><img alt="Fotógrafo de boda en Castellón" decoding="async" loading="lazy" src="images/portadas/portadas-06.jpg"/></div><div class="zone-content"><h3>Fotógrafo de boda en Castellón</h3><p>Realizamos fotografía y vídeo de boda en Castellón y provincia, trabajando en fincas, masías, iglesias y celebraciones civiles. Nos adaptamos a cada pareja para capturar su boda con un estilo natural y cercano. Nos movemos por Castellón, costa e interior, y también por Valencia y Alicante.</p></div></div><div class="zone-card reveal"><div class="zone-img"><img alt="Fotógrafo de boda en Valencia" decoding="async" loading="lazy" src="images/portadas/portadas-14.jpg"/></div><div class="zone-content"><h3>Fotógrafo de boda en Valencia</h3><p>Ofrecemos servicios de fotografía y vídeo de boda en Valencia, tanto en ciudad como en localidades cercanas. Cubrimos bodas civiles y religiosas, cuidando cada detalle y cada emoción del día. Valencia ciudad, alrededores y fincas de la provincia.</p></div></div><div class="zone-card reveal"><div class="zone-img"><img alt="Fotógrafo de boda en Alicante" decoding="async" loading="lazy" src="images/portadas/portadas-16.jpg"/></div><div class="zone-content"><h3>Fotógrafo de boda en Alicante</h3><p>Trabajamos como fotógrafos y videógrafos de boda en Alicante, especialmente en bodas al aire libre, fincas y celebraciones junto al mar, creando recuerdos emocionales y auténticos. Alicante, Costa Blanca y celebraciones junto al mar.</p></div></div></div></div></section>
+
+<section class="portfolio" id="galeria">
+  <div class="container">
+    <div class="section-header reveal">
+      <span>Galerías</span>
+      <h2>Bodas reales</h2>
+      <p style="color: var(--texto-secundario); margin-top: 10px;">Historias completas para ver nuestro estilo, luz y narrativa.</p>
+    </div>
+
+    <!-- Grid de 8 Bodas Estilo Poster -->
+    <div class="zones-grid" style="margin-top: 10px;">
+      
+      <!-- Boda 1 -->
+      <a class="zone-card reveal" href="boda-01.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-01/01-Elena-y-Yagmyr-Valencia-64.jpg" alt="Elena y Yagmyr" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Elena & Yagmyr</h3>
+          <p>Valencia · Finca Maria Elena</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 2 -->
+      <a class="zone-card reveal" href="boda-02.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-02/02-Marce-y-Dani-Peñíscola-Castellón-62.jpg" alt="Marce y Dani" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Marce & Dani</h3>
+          <p>Peñíscola · Castellón</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 3 -->
+      <a class="zone-card reveal" href="boda-03.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-03/03-Toni-y-Alicia-Benicasim-Castellón-52.jpg" alt="Toni y Alicia" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Toni & Alicia</h3>
+          <p>Benicasim · Castellón</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 4 -->
+      <a class="zone-card reveal" href="boda-04.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-04/04-Paula-y-Pedro-Valencia-67.jpg" alt="Paula y Pedro" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Paula & Pedro</h3>
+          <p>Valencia · Ciudad</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 5 -->
+      <a class="zone-card reveal" href="boda-05.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-05/05-Rosa-y-Javi-Carlet-Torrent-Valencia-36.jpg" alt="Rosa y Javi" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Rosa & Javi</h3>
+          <p>Carlet · Valencia</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 6 -->
+      <a class="zone-card reveal" href="boda-06.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-06/06-Tamara-y-David-Muro-de-Alcoy-Alicante-47.jpg" alt="Tamara y David" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Tamara & David</h3>
+          <p>Muro de Alcoy · Alicante</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 7 -->
+      <a class="zone-card reveal" href="boda-07.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-07/07-Pilar-y-Marta-Castellón-52.jpg" alt="Pilar y Marta" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Pilar & Marta</h3>
+          <p>Castellón · Finca</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+      <!-- Boda 8 -->
+      <a class="zone-card reveal" href="boda-08.html" style="text-decoration:none; color:inherit;">
+        <div class="zone-img"><img src="images/boda-08/08-Andreea-y-Hugo-Sueca-Valencia-47.jpg" alt="Andreea y Hugo" loading="lazy" decoding="async"/></div>
+        <div class="zone-content">
+          <h3>Andreea & Hugo</h3>
+          <p>Sueca · Valencia</p>
+          <p style="margin-top:10px;">Ver galería →</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL LIGHTBOX (Solo para secciones estáticas) -->
+<div class="lightbox-modal" id="lightbox">
+<button class="lightbox-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+<div class="lightbox-content">
+<img alt="Visor" class="lightbox-image" decoding="async" id="lightbox-img" loading="lazy" src=""/>
+</div>
+</div>
+
+<!-- FAQs -->
+<section class="faq" id="faqs">
+  <div class="container">
+    <div class="section-header reveal">
+      <span>Preguntas frecuentes</span>
+      <h2>Todo lo que suele preguntarse antes de reservar</h2>
+      <p style="color: var(--texto-secundario); margin-top: 10px;">Resolvemos dudas habituales sobre packs, entrega, extras y cobertura en Valencia, Castellón y Alicante.</p>
+    </div>
+
+    <div class="faq-grid">
+      <details class="faq-item reveal">
+        <summary>¿Trabajáis en Valencia, Castellón y Alicante?</summary>
+        <div class="faq-body"><p>Sí. Cubrimos toda la Comunidad Valenciana y nos desplazamos por Valencia, Castellón y Alicante (ciudad y provincia).</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Qué incluye el pack desde 1.499€?</summary>
+        <div class="faq-body"><p>Cobertura completa del día en <strong>fotografía y vídeo</strong>, con entrega digital/Pendrive. <strong>Álbum y dron</strong> son extras opcionales.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿El dron está incluido en el precio?</summary>
+        <div class="faq-body"><p>No. El dron es un servicio extra. Se confirma según localización, permisos y condiciones meteorológicas.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cuántas horas cubrís el día de la boda?</summary>
+        <div class="faq-body"><p>Normalmente desde preparativos hasta una parte de la fiesta. Lo ajustamos según horarios y tipo de boda (civil o religiosa).</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Hacéis bodas civiles y religiosas?</summary>
+        <div class="faq-body"><p>Sí. Tenemos experiencia en ambas: ceremonia civil, iglesia, cóctel, banquete y fiesta.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cuándo entregáis el reportaje?</summary>
+        <div class="faq-body"><p>Depende de la temporada y la carga de trabajo. Os damos una fecha estimada al reservar para que lo tengáis claro desde el inicio.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cómo elegimos la música?</summary>
+        <div class="faq-body"><p>Editamos con las canciones que habéis elegido para vuestra boda (entrada, ceremonia, baile, etc.). Si necesitamos completar algún momento, os pediremos 1–2 referencias para mantener la misma línea musical.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Ofrecéis preboda y postboda?</summary>
+        <div class="faq-body"><p>Sí, como sesiones opcionales. Son ideales para perder el miedo a la cámara y tener fotos en otro entorno.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cómo se reserva la fecha?</summary>
+        <div class="faq-body"><p>Con confirmación por escrito y una señal de reserva. Así bloqueamos el día para vosotros.</p></div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cómo contactamos más rápido?</summary>
+        <div class="faq-body"><p>Por WhatsApp. Si nos enviáis fecha + lugar + tipo de ceremonia, os respondemos en 24h con disponibilidad y opciones.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+<div class="container">
+<div class="contact-wrapper reveal">
+<div class="section-header">
+<span>Contacto</span>
+<h2>Fotógrafos y videógrafos de boda en Castellón, Valencia y Alicante</h2>
+<p style="color: var(--texto-secundario); margin-top: 10px; font-size: 0.9rem;">
+  Contadnos fecha y lugar y os diremos en <strong>24h</strong> si estamos disponibles.
+  Podéis ver bodas reales y trabajos completos en nuestro <strong>Instagram</strong>.
+</p>
+</div>
+<!-- FORMSPREE: Código xojvqndl -->
+<div class="contact-links reveal" id="contact-links"><a class="contact-pill" href="https://www.instagram.com/happyweddings.spain/" rel="noopener" target="_blank">Instagram</a><a class="contact-pill" href="https://wa.me/34614297072" rel="noopener" target="_blank">WhatsApp</a><a class="contact-pill" href="mailto:happyweddings.spain@gmail.com">Email</a></div><form action="https://formspree.io/f/xojvqndl" method="POST">
+<!-- Redirección de vuelta a GitHub -->
+<input name="_next" type="hidden" value="https://42562830.github.io/HappyWeddings/gracias.html"/>
+<div class="form-group">
+<label>Vuestros Nombres</label>
+<input class="form-control" name="nombre" placeholder="Ej: Laura y Marc" required="" type="text"/>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+<div class="form-group">
+<label>Email</label>
+<input class="form-control" name="email" placeholder="hola@email.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label>Teléfono</label>
+<input class="form-control" name="telefono" placeholder="+34 ..." type="tel"/>
+</div>
+</div>
+<div class="form-group">
+<label>Fecha y Lugar</label>
+<input class="form-control" name="fecha" placeholder="¿Cuándo y dónde?" type="text"/>
+</div>
+<div class="form-group">
+<label>Contadnos vuestra idea</label>
+<textarea class="form-control" name="mensaje" placeholder="¿Qué es lo más importante para vosotros en la boda?" rows="4"></textarea>
+</div>
+<div class="text-center" style="margin-top: 40px;">
+<button class="btn-editorial" style="width: 100%;" type="submit">Enviar Mensaje</button>
+</div>
+</form><p class="contact-close" id="contact-close">Fotógrafos y videógrafos de boda en Castellón, Valencia y Alicante.</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div style="margin-bottom: 20px;">
+<img alt="Happy Weddings" decoding="async" src="Logo.png" style="height: 50px; opacity: 0.8;"/>
+</div>
+<div class="social-icons" style="margin-bottom: 30px;"><a href="https://www.instagram.com/happyweddings.spain/" rel="noopener" target="_blank"><i class="fab fa-instagram"></i></a><a href="https://wa.me/34614297072" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i></a><a href="mailto:happyweddings.spain@gmail.com"><i class="far fa-envelope"></i></a></div>
+<p style="font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-bottom: 12px;">Happy Weddings · Fotografía y vídeo de boda · Valencia · Castellón · Alicante · WhatsApp +34 614 29 70 72 · happyweddings.spain@gmail.com</p>
+<p style="font-size: 0.7rem; color: rgba(255,255,255,0.5);">© 2026 Happy Weddings Spain. Diseñado con amor.</p>
+</div>
+</footer>
+<!-- WhatsApp Flotante -->
+<a aria-label="Abrir WhatsApp" class="whatsapp-float" href="https://api.whatsapp.com/send/?phone=34614297072&amp;text=Hola+Happy+Weddings" rel="noopener" target="_blank" title="WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+<!-- Scripts -->
+<script>
+        document.body.classList.add('js');
+
+        // --- FUNCIONALIDADES STANDARD ---
+        const mobileNav = document.getElementById('mobile-nav');
+        function toggleMenu() {
+            const isActive = mobileNav.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+            const burger = document.getElementById('hamburger');
+            if (burger) burger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // LIGHTBOX SIMPLE (Para imágenes genéricas si las hubiera)
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function closeModal() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        // Accesibilidad / UX
+        const burgerEl = document.getElementById('hamburger');
+        if (burgerEl) {
+            burgerEl.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+            });
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape') return;
+            if (lightbox && lightbox.classList.contains('open')) closeModal();
+            if (mobileNav && mobileNav.classList.contains('active')) toggleMenu();
+        });
+        if(lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeModal();
+            });
+        }
+    </script>
+</body>
+</html>
